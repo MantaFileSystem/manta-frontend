@@ -1,2 +1,1 @@
 # manta-frontend
-
