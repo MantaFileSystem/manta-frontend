@@ -1,3 +1,1 @@
 # manta-frontend
-
-Hello
