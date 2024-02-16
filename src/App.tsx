@@ -1,7 +1,7 @@
 import "./stylesheets/App.scss";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DashboardPage from "./components/DashboardPage";
+import DashboardPage from "./components/DashBoardPage";
 import FileUploadPage from "./components/FileUploadPage";
 import PeerPage from "./components/PeerPage";
 import SettingPage from "./components/SettingPage";
