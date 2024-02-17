@@ -1,0 +1,52 @@
+@mixin centerHorizontal {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin spaceBetweenVertical {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@mixin dropDownShadow {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.menu {
+    @include spaceBetweenVertical;
+    
+    height: 100%;
+
+    background-color: #12486B;
+    opacity: 85%;
+
+    .logo {
+        @include centerHorizontal;
+        margin-top: 30px;
+    }
+}
+
+.menu :is(.tabs, .support) {
+    div {
+        @include centerHorizontal;
+        margin-top: 10px;
+    }
+
+    svg {
+        @include dropDownShadow;
+    }
+}
+
+.menu .tabs {
+    @include spaceBetweenVertical;
+    height: 35%;
+    margin-bottom: 100px;
+}
+
+.menu .support {
+    @include centerHorizontal;
+    margin: 10px 0 70px;
+}
+
+

@@ -4,4 +4,29 @@ Use @import "scss filename" to append other scss files to this one
 Partial scss files must start with a underscore.
 */
 
-@import "_test";
+@import "menu";
+
+@mixin fullscreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:is(html, body, #root) {
+  @include fullscreen;
+}
+
+#root {
+  .content {
+    grid-area: content;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+
+  display: grid;
+  grid-template-areas: "menu content";
+  grid-template-columns: 128px 1fr;
+}

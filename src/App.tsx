@@ -1,22 +1,43 @@
 import "./stylesheets/App.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
+import Menu from "./components/Menu";
 import DashBoardPage from "./components/DashBoardPage";
 import FileUploadPage from "./components/FileUploadPage";
 import PeerPage from "./components/PeerPage";
 import SettingPage from "./components/SettingPage";
 
-function App() {
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<DashBoardPage />} />
-        <Route path="/file-upload" element={<FileUploadPage />} />
-        <Route path="/peer" element={<PeerPage />} />
-        <Route path="/setting" element={<SettingPage />} />
-      </Routes>
-    </BrowserRouter>
-  )
+function LocationProvider({ children }: { children: React.ReactNode }) {
+  console.log(children);
+  return <AnimatePresence>{children}</AnimatePresence>;
 }
 
-export default App
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<DashBoardPage />} />
+      <Route path="/file-upload" element={<FileUploadPage />} />
+      <Route path="/peer" element={<PeerPage />} />
+      <Route path="/setting" element={<SettingPage />} />
+    </Routes>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Menu />
+        <LocationProvider>
+          <AnimatedRoutes />
+        </LocationProvider>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
