@@ -5,6 +5,9 @@ Partial scss files must start with a underscore.
 */
 
 @import "menu";
+@import "dashBoardPage";
+@import "searchBar";
+@import "timeBar";
 
 @mixin fullscreen {
   width: 100%;

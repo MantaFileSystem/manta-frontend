@@ -1,0 +1,32 @@
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+.dashboard {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  background-color: #eaf1f2;
+}
+
+.info {
+  flex: 3;
+  background-color: white;
+  flex-direction: row;
+}
+
+.dashboard-header {
+  flex: 1;
+  flex-direction: row;
+}
+
+.dashboard-bandwidth {
+  flex: 5;
+  flex-direction: row;
+}
+
+.dashboard-traffic {
+  flex: 4;
+  flex-direction: row;
+}

@@ -1,52 +1,50 @@
 @mixin centerHorizontal {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 @mixin spaceBetweenVertical {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 @mixin dropDownShadow {
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 .menu {
-    @include spaceBetweenVertical;
-    
-    height: 100%;
+  @include spaceBetweenVertical;
 
-    background-color: #12486B;
-    opacity: 85%;
+  height: 100%;
 
-    .logo {
-        @include centerHorizontal;
-        margin-top: 30px;
-    }
+  background-color: #12486b;
+  opacity: 85%;
+
+  .logo {
+    @include centerHorizontal;
+    margin-top: 30px;
+  }
 }
 
 .menu :is(.tabs, .support) {
-    div {
-        @include centerHorizontal;
-        margin-top: 10px;
-    }
+  div {
+    @include centerHorizontal;
+    margin-top: 10px;
+  }
 
-    svg {
-        @include dropDownShadow;
-    }
+  svg {
+    @include dropDownShadow;
+  }
 }
 
 .menu .tabs {
-    @include spaceBetweenVertical;
-    height: 35%;
-    margin-bottom: 100px;
+  @include spaceBetweenVertical;
+  height: 35%;
+  margin-bottom: 100px;
 }
 
 .menu .support {
-    @include centerHorizontal;
-    margin: 10px 0 70px;
+  @include centerHorizontal;
+  margin: 10px 0 70px;
 }
-
-
