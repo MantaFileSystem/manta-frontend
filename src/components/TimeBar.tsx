@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Clock } from "react-bootstrap-icons";
-import { Row, Col, Container } from "react-bootstrap";
 
 const TimeBar = () => {
   const [time, setTime] = useState(new Date());
