@@ -10,14 +10,19 @@ const SearchBar = () => {
 
   return (
     <div className="searchBar">
-      <div>
-        <Search size={15} />
-      </div>
+      <Search
+        size={15}
+        style={{ left: "8px", right: "8px" }}
+        className="search-icon"
+      />
+
       <input
         type="text"
         placeholder="Search File/CID"
         value={query}
         onChange={handleChange}
+        style={{}}
+        className="search-input"
       />
     </div>
   );

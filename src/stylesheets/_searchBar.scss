@@ -1,5 +1,20 @@
 .searchBar {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  position: relative;
+  display: inline-block;
+}
+
+.search-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-input {
+  padding-left: 30px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  height: 30px;
+  width: 200px;
 }
