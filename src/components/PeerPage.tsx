@@ -1,3 +1,3 @@
 export default function PeerPage() {
-  return <div>PeerPage</div>;
+  return <div >PeerPage</div>;
 }
