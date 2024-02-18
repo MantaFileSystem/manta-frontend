@@ -26,7 +26,7 @@ export default function DashBoardPage() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                margin: "10px",
+                margin: " 10px 40px 10px 40px",
               }}
             >
               <SearchBar></SearchBar>
@@ -34,9 +34,9 @@ export default function DashBoardPage() {
             </Container>
           </div>
           <div className="dashboard-bandwidth">
-            <div style={{ margin: "0px 0px 20px 50px" }}>
+            <div style={{ margin: "10px 0px 20px 50px" }}>
               BANDWIDTH OVER TIME
-            </div>{" "}
+            </div>
             <div style={{ margin: "0px 0px 10px 0px" }}>
               <Bandwidth></Bandwidth>
             </div>

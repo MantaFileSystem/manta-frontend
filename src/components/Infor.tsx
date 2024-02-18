@@ -1,4 +1,3 @@
-// import React from "react";
 import { Col, Container } from "react-bootstrap";
 import Coin from "../svgs/orcaCoin.tsx";
 import Orca from "../svgs/orca.tsx";
@@ -9,9 +8,9 @@ export default function Infor() {
       <Col
         className="text-center"
         style={{
-          margin: "20px",
+          margin: "20px 20px 20px 20px",
           fontFamily: "Kanit, sans-serif",
-          width: "280px",
+          width: "90%",
         }}
       >
         <h2 style={{ margin: "50px 0px 20px 20px", color: "#12486B" }}>
@@ -24,6 +23,7 @@ export default function Infor() {
               display: "flex",
               alignItems: "center",
               margin: "20px 0px 20px 20px",
+              cursor: "pointer",
             }}
           >
             <div style={{ marginRight: "5px" }}>Balance:</div>
@@ -37,6 +37,7 @@ export default function Infor() {
             margin: "20px 0px 20px 20px",
             color: "#12486B",
             wordWrap: "break-word",
+            cursor: "pointer",
           }}
         >
           12D3KooWM1J3AZKnEvVtEVjwFka2Z2Z9EZo5XVzUoyrAofWRUUWK
@@ -47,6 +48,7 @@ export default function Infor() {
             margin: "20px 0px 20px 20px",
             color: "#12486B",
             wordWrap: "break-word",
+            cursor: "pointer",
           }}
         >
           CAESIKY9RkdcwVuPzyQPn2SX7CEJRIj87Y1Mxtm0S5ABQMvI
@@ -57,11 +59,20 @@ export default function Infor() {
             margin: "20px 0px 20px 20px",
             color: "#12486B",
             wordWrap: "break-word",
+            cursor: "pointer",
           }}
         >
           http://127.0.0.1:8080
         </div>
-        <Orca />
+        <div
+          style={{
+            margin: "140px 0px 0px 120px",
+            color: "#12486B",
+            wordWrap: "break-word",
+          }}
+        >
+          <Orca fill="#12486B" width={180} height={180} />
+        </div>
       </Col>
     </div>
   );
