@@ -32,15 +32,15 @@ const TimeBar = () => {
       style={{ justifyContent: "space-between" }}
     >
       <div className="time-bar-left">
-        <span className="time-text">
-          <Clock /> {}
-          {formattedTime}
-        </span>
+        <div className="time-content">
+          <Clock className="time-bar-icon" />
+          <span className="time-text">{formattedTime}</span>
+        </div>
       </div>
       {}
       <div className="time-bar-right">
-        <span className="time-text">
-          {day} {m} {y}{" "}
+        <span className="time-text-date">
+          {day} {m} {y}
         </span>
       </div>
     </div>
