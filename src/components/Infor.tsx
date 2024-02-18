@@ -1,6 +1,7 @@
 import { Col, Container } from "react-bootstrap";
 import Coin from "../svgs/orcaCoin.tsx";
-import Orca from "../svgs/orca.tsx";
+// import Orca from "../svgs/orca.tsx";
+import Logo from "../svgs/Logo.svg";
 
 export default function Infor() {
   return (
@@ -64,15 +65,15 @@ export default function Infor() {
         >
           http://127.0.0.1:8080
         </div>
-        <div
+
+        <img
+          width="110px"
           style={{
-            margin: "140px 0px 0px 120px",
-            color: "#12486B",
-            wordWrap: "break-word",
+            margin: "180px 0px 0px 180px",
           }}
-        >
-          <Orca fill="#12486B" width={180} height={180} />
-        </div>
+          src={Logo}
+          alt=""
+        />
       </Col>
     </div>
   );

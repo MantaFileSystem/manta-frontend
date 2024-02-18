@@ -5,8 +5,8 @@ import { Container } from "react-bootstrap";
 import SearchBar from "./SearchBar.tsx";
 import TimeBar from "./TimeBar.tsx";
 import Infor from "./Infor.tsx";
-import Traffic from "../svgs/netTraffic.tsx";
-import Bandwidth from "../svgs/Bandwidth.tsx";
+import Traffic from "../svgs/netTraffic.png";
+import Bandwidth from "../svgs/Bandwidth.png";
 
 export default function DashBoardPage() {
   return (
@@ -16,8 +16,6 @@ export default function DashBoardPage() {
       animate="final"
       variants={routeVariants}
     >
-      {/* <SearchBar />
-      <TimehBar /> */}
       <div className="page">
         <div className="dashboard">
           <div className="dashboard-header">
@@ -34,18 +32,28 @@ export default function DashBoardPage() {
             </Container>
           </div>
           <div className="dashboard-bandwidth">
-            <div style={{ margin: "10px 0px 20px 50px" }}>
+            <div style={{ margin: "10px 0px 20px 80px" }}>
               BANDWIDTH OVER TIME
             </div>
-            <div style={{ margin: "0px 0px 10px 0px" }}>
-              <Bandwidth></Bandwidth>
-            </div>
+            <img
+              width="830px"
+              style={{
+                margin: " 0px 0px 0px 80px",
+              }}
+              src={Bandwidth}
+              alt=""
+            />
           </div>
           <div className="dashboard-traffic">
-            <div style={{ margin: "0px 0px 20px 50px" }}>NETWORK TRAFFIC</div>
-            <div style={{ margin: "0px 0px 0px 0px" }}>
-              <Traffic></Traffic>
-            </div>
+            <div style={{ margin: "20px 0px 00px 80px" }}>NETWORK TRAFFIC</div>
+            <img
+              width="830px"
+              style={{
+                margin: "20px 0px 0px 70px",
+              }}
+              src={Traffic}
+              alt=""
+            />
           </div>
         </div>
         <div className="info">
