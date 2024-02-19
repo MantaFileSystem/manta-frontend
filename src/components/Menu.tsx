@@ -1,37 +1,61 @@
-import Logo from "../svgs/Logo.tsx";
+import Logo from "../svgs/OrcaNetLogo.tsx";
+
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import {
   PersonGear,
   CloudArrowUp,
   DatabaseAdd,
   Gear,
   InfoCircle,
+  PersonFillGear,
+  CloudArrowUpFill,
+  DatabaseFillAdd,
+  GearFill
 } from "react-bootstrap-icons";
 
 const iconColor: string = "white",
   iconSize: number = 38;
 
 function Tabs() {
+  const [active, setActive] = useState("dashboard");
+
   return (
     <div className="tabs">
       <NavLink to="/">
-        <div>
-          <PersonGear color={iconColor} size={iconSize} />
+        <div onClick={() => setActive("dashboard")}>
+          {active === "dashboard" ? (
+            <PersonFillGear color={iconColor} size={iconSize} />
+          ) : (
+            <PersonGear color={iconColor} size={iconSize} />
+          )}
         </div>
       </NavLink>
       <NavLink to="/file-upload">
-        <div>
-          <CloudArrowUp color={iconColor} size={iconSize} />
+        <div onClick={() => setActive("file-upload")}>
+          {active === "file-upload" ? (
+            <CloudArrowUpFill color={iconColor} size={iconSize} />
+          ) : (
+            <CloudArrowUp color={iconColor} size={iconSize} />
+          )}
         </div>
       </NavLink>
       <NavLink to="/peer">
-        <div>
-          <DatabaseAdd color={iconColor} size={iconSize} />
+        <div onClick={() => setActive("peer")}>
+          {active === "peer" ? (
+            <DatabaseFillAdd color={iconColor} size={iconSize} />
+          ) : (
+            <DatabaseAdd color={iconColor} size={iconSize} />
+          )}
         </div>
       </NavLink>
       <NavLink to="/setting">
-        <div>
-          <Gear color={iconColor} size={iconSize} />
+        <div onClick={() => setActive("setting")}>
+          {active === "setting" ? (
+            <GearFill color={iconColor} size={iconSize} />
+          ) : (
+            <Gear color={iconColor} size={iconSize} />
+          )}
         </div>
       </NavLink>
     </div>
