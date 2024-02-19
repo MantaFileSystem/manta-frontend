@@ -1,4 +1,5 @@
 import "./stylesheets/App.scss";
+import "bootstrap/dist/css/bootstrap.css";
 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
