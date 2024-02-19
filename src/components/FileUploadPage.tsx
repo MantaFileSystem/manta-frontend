@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { routeVariants } from "../helper/RouterAnimation";
 
+import Header from "./Header/Header";
+
 function UploadStatus() {
   return (
     <div className="upload-status">
+      <Header />
       <h3>File Upload Status</h3>
     </div>
   );
