@@ -1,0 +1,23 @@
+@use "helper";
+
+.setting {
+  @include helper.contentLayout("main-setting orca-coin-connection");
+
+  overflow: hidden;
+
+  color: helper.$subTextColor;
+
+  .main-setting {
+    @include helper.noScrollbar;
+
+    grid-area: main-setting;
+
+    padding: 40px;
+
+    background-color: helper.$backgroundColor;
+  }
+
+  .orca-coin-connection {
+    grid-area: orca-coin-connection;
+  }
+}
