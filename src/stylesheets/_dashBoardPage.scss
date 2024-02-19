@@ -5,6 +5,14 @@ $subTextColor: #4b4f5d;
 $importantTextColor: #12486b;
 
 .dashboard-page {
+  display: grid;
+  grid-template-areas: "metric user-info";
+  grid-template-columns: 75% 1fr;
+
+  overflow: hidden;
+
+  color: $subTextColor;
+
   .dashborad-header {
     @include helper.spaceBetween(row);
 
@@ -12,14 +20,12 @@ $importantTextColor: #12486b;
   }
 
   .metric {
+    @include helper.noScrollbar;
+
     grid-area: metric;
     padding: 40px;
 
     background-color: $backgroundColor;
-
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
   }
 
   .metric::-webkit-scrollbar {
@@ -30,15 +36,9 @@ $importantTextColor: #12486b;
     grid-area: user-info;
 
     padding: 20px 40px;
+
+    @include helper.noScrollbar;
   }
-
-  display: grid;
-  grid-template-areas: "metric user-info";
-  grid-template-columns: 75% 1fr;
-
-  overflow: hidden;
-
-  color: $subTextColor;
 }
 
 .dashboard-page .metric {
