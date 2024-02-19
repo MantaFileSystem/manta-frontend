@@ -11,8 +11,7 @@ import {
   PersonFillGear,
   CloudArrowUpFill,
   DatabaseFillAdd,
-  GearFill,
-  InfoCircleFill,
+  GearFill
 } from "react-bootstrap-icons";
 
 const iconColor: string = "white",
