@@ -4,19 +4,13 @@ $backgroundColor: #eaf1f2;
 $subTextColor: #4b4f5d;
 $importantTextColor: #12486b;
 
-.peer-page{
+.file-upload-page{
     // overflow: hidden;
     color: $subTextColor;
     background-color: $backgroundColor;
     padding: 40px;
 
-    // .map-container{
-    //     @include helper.centerHorizontal;
-    //     margin-top: 50px;
-    //     margin-bottom: 50px;
-    // }
-
-    .peer-list {
+    .file-list {
         overflow: hidden;
     }
 }
