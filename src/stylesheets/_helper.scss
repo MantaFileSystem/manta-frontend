@@ -1,3 +1,7 @@
+$backgroundColor: #eaf1f2;
+$subTextColor: #4b4f5d;
+$importantTextColor: #12486b;
+
 @mixin centerHorizontal {
   display: flex;
   justify-content: center;
@@ -22,4 +26,10 @@
     overflow-y: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+@mixin contentLayout($row) {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-areas: $row;
 }

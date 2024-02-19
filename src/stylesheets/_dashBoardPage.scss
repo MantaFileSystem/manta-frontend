@@ -1,17 +1,11 @@
 @use "_helper";
 
-$backgroundColor: #eaf1f2;
-$subTextColor: #4b4f5d;
-$importantTextColor: #12486b;
-
 .dashboard-page {
-  display: grid;
-  grid-template-areas: "metric user-info";
-  grid-template-columns: 75% 1fr;
+  @include helper.contentLayout("metric user-info");
 
   overflow: hidden;
 
-  color: $subTextColor;
+  color: helper.$subTextColor;
 
   .dashborad-header {
     @include helper.spaceBetween(row);
@@ -25,7 +19,7 @@ $importantTextColor: #12486b;
     grid-area: metric;
     padding: 40px;
 
-    background-color: $backgroundColor;
+    background-color: helper.$backgroundColor;
   }
 
   .metric::-webkit-scrollbar {
@@ -71,7 +65,7 @@ $importantTextColor: #12486b;
   }
 
   :is(h2, p, span) {
-    color: $importantTextColor;
+    color: helper.$importantTextColor;
     font-weight: bolder;
   }
 
