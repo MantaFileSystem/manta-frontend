@@ -2,24 +2,13 @@
 
 .dashboard-page {
   @include helper.contentLayout("metric user-info");
-
   overflow: hidden;
-
   color: helper.$subTextColor;
-
-  .dashborad-header {
-    @include helper.spaceBetween(row);
-
-    margin-bottom: 1.5em;
-  }
 
   .metric {
     @include helper.noScrollbar;
-
     grid-area: metric;
-
     padding: 40px;
-
     background-color: helper.$backgroundColor;
   }
 
@@ -28,11 +17,9 @@
   }
 
   .user-info-panel {
-    grid-area: user-info;
-
-    padding: 20px 40px;
-
     @include helper.noScrollbar;
+    grid-area: user-info;
+    padding: 20px 40px;
   }
 }
 

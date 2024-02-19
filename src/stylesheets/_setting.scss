@@ -9,15 +9,28 @@
 
   .main-setting {
     @include helper.noScrollbar;
-
     grid-area: main-setting;
-
     padding: 40px;
-
     background-color: helper.$backgroundColor;
   }
 
   .orca-coin-connection {
     grid-area: orca-coin-connection;
+  }
+}
+
+.main-setting .access-key-generator {
+  margin-top: 3em;
+
+  p {
+    margin: 0;
+    color: helper.$importantTextColor;
+    font-weight: bolder;
+  }
+
+  .generator {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
   }
 }

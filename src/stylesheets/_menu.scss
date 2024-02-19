@@ -2,9 +2,7 @@
 
 .menu {
   @include helper.spaceBetween(column);
-
   height: 100%;
-
   background-color: #12486b;
   opacity: 85%;
 

@@ -1,16 +1,6 @@
-import SearchBar from "../SearchBar.tsx";
-import TimeBar from "./TimeBar.tsx";
 import Traffic from "../../images/netTraffic.png";
 import Bandwidth from "../../images/bandwidthGraph.png";
-
-function Header() {
-  return (
-    <div className="dashborad-header">
-      <SearchBar />
-      <TimeBar />
-    </div>
-  );
-}
+import Header from "../Header/Header";
 
 function Graph({
   className,

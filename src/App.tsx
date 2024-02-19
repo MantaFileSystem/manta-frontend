@@ -7,7 +7,7 @@ import Menu from "./components/Menu";
 import DashboardPage from "./components/Dashboard/DashboardPage";
 import FileUploadPage from "./components/FileUploadPage";
 import PeerPage from "./components/PeerPage";
-import SettingPage from "./components/SettingPage";
+import SettingPage from "./components/Setting/SettingPage";
 
 function LocationProvider({ children }: { children: React.ReactNode }) {
   console.log(children);
