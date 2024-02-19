@@ -41,11 +41,16 @@
 .dashboard-page .user-info-panel {
   h2 {
     font-size: 25px;
+    margin: 10px 0 20px;
   }
 
   p {
-    margin: 0 0 2em 0;
     word-break: break-all;
+    margin: 0;
+  }
+
+  div {
+    margin-bottom: 2em;
   }
 
   h3:not(.balance h3) {
