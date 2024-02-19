@@ -1,18 +1,9 @@
 import { motion } from "framer-motion";
 import { routeVariants } from "../helper/RouterAnimation";
-import SearchBar from "./SearchBar";
-import TimeBar from "./Dashboard/TimeBar";
 import { MapContainer, TileLayer, Popup, Circle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-function Header() {
-  return (
-    <div className="dashborad-header">
-      <SearchBar />
-      <TimeBar />
-    </div>
-  );
-}
+import Header from "./Header/Header";
 
 function MapContent() {
   return (

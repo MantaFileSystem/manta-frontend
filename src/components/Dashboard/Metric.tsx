@@ -1,6 +1,6 @@
 import Traffic from "../../images/netTraffic.png";
 import Bandwidth from "../../images/bandwidthGraph.png";
-import Header from "../Header.tsx";
+import Header from "../Header/Header";
 
 function Graph({
   className,

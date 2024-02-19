@@ -1,31 +1,15 @@
-@use "_helper";
-
-$backgroundColor: #eaf1f2;
-$subTextColor: #4b4f5d;
-$importantTextColor: #12486b;
+@use "helper";
 
 .dashboard-page {
-  display: grid;
-  grid-template-areas: "metric user-info";
-  grid-template-columns: 75% 1fr;
-
+  @include helper.contentLayout("metric user-info");
   overflow: hidden;
-
-  color: $subTextColor;
-
-  .dashborad-header {
-    @include helper.spaceBetween(row);
-
-    margin-bottom: 1.5em;
-  }
+  color: helper.$subTextColor;
 
   .metric {
     @include helper.noScrollbar;
-
     grid-area: metric;
     padding: 40px;
-
-    background-color: $backgroundColor;
+    background-color: helper.$backgroundColor;
   }
 
   .metric::-webkit-scrollbar {
@@ -33,11 +17,9 @@ $importantTextColor: #12486b;
   }
 
   .user-info-panel {
-    grid-area: user-info;
-
-    padding: 20px 40px;
-
     @include helper.noScrollbar;
+    grid-area: user-info;
+    padding: 20px 40px;
   }
 }
 
@@ -59,11 +41,16 @@ $importantTextColor: #12486b;
 .dashboard-page .user-info-panel {
   h2 {
     font-size: 25px;
+    margin: 10px 0 20px;
   }
 
   p {
-    margin: 0 0 2em 0;
     word-break: break-all;
+    margin: 0;
+  }
+
+  div {
+    margin-bottom: 2em;
   }
 
   h3:not(.balance h3) {
@@ -71,7 +58,7 @@ $importantTextColor: #12486b;
   }
 
   :is(h2, p, span) {
-    color: $importantTextColor;
+    color: helper.$importantTextColor;
     font-weight: bolder;
   }
 
