@@ -2,10 +2,8 @@ import { motion } from "framer-motion";
 import { routeVariants } from "../../helper/RouterAnimation";
 
 import MainSetting from "./MainSetting";
+import OrcaCoinConnection from "./OrcaCoinConnection";
 
-function OrcaCoinConnection() {
-  return <div className="orca-coin-connection">asas</div>;
-}
 
 export default function SettingPage() {
   return (

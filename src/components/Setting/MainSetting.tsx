@@ -11,6 +11,15 @@ function AccessKeyGenerator() {
           This feature requires your node to be online at least once a day to
           ensure ONNS records are kept alive on the public DHT.
         </p>
+        <div className="key-box">
+          <input
+            type="text"
+            className="access-key"
+            value="CAESIKY9RkdcwVuPzyQPn2SX7CEJRIj87Y1Mxtm0S5ABQMvI"
+            placeholder="Enter Access Key"
+          />
+          <button>Generate</button>
+        </div>
       </div>
     </div>
   );
