@@ -17,3 +17,9 @@
 @mixin dropDownShadow {
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
+@mixin noScrollbar {
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
