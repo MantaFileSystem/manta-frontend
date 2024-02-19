@@ -1,4 +1,4 @@
-@use "_helper";
+@use "helper";
 
 .dashboard-page {
   @include helper.contentLayout("metric user-info");
@@ -17,6 +17,7 @@
     @include helper.noScrollbar;
 
     grid-area: metric;
+
     padding: 40px;
 
     background-color: helper.$backgroundColor;

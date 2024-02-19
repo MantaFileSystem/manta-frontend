@@ -1,4 +1,4 @@
-@use "_helper";
+@use "helper";
 
 .menu {
   @include helper.spaceBetween(column);
