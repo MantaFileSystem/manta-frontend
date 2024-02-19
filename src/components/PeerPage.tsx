@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { routeVariants } from "../helper/RouterAnimation";
 import SearchBar from "./SearchBar";
 import TimeBar from "./Dashboard/TimeBar";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Popup, Circle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 function Header() {
@@ -35,11 +35,22 @@ function MapContent() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={[0, 0]}>
+      {/* <Marker position={[0, 0]}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
-      </Marker>
+      </Marker> */}
+      <Circle
+        center={[21, 20]}
+        radius={250}
+        weight={10}
+        opacity={0.5}
+        fillOpacity={0.75}
+      >
+        <Popup>
+          Node at [21, 20] <br /> Easily customizable.
+        </Popup>
+      </Circle>
     </MapContainer>
   );
 }
