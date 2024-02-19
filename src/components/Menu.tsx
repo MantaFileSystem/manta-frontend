@@ -1,4 +1,4 @@
-import Logo from "../svgs/Logo.tsx";
+import Logo from "../svgs/OrcaNetLogo.tsx";
 import { NavLink } from "react-router-dom";
 import {
   PersonGear,
