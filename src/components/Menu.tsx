@@ -18,13 +18,13 @@ const iconColor: string = "white",
   iconSize: number = 38;
 
 function Tabs() {
-  const [active, setActive] = useState("dashboard");
+  const [active, setActive] = useState(window.location.pathname);
 
   return (
     <div className="tabs">
       <NavLink to="/">
-        <div onClick={() => setActive("dashboard")}>
-          {active === "dashboard" ? (
+        <div onClick={() => setActive("/")}>
+          {active === "/" ? (
             <PersonFillGear color={iconColor} size={iconSize} />
           ) : (
             <PersonGear color={iconColor} size={iconSize} />
@@ -32,8 +32,8 @@ function Tabs() {
         </div>
       </NavLink>
       <NavLink to="/file-upload">
-        <div onClick={() => setActive("file-upload")}>
-          {active === "file-upload" ? (
+        <div onClick={() => setActive("/file-upload")}>
+          {active === "/file-upload" ? (
             <CloudArrowUpFill color={iconColor} size={iconSize} />
           ) : (
             <CloudArrowUp color={iconColor} size={iconSize} />
@@ -41,8 +41,8 @@ function Tabs() {
         </div>
       </NavLink>
       <NavLink to="/peer">
-        <div onClick={() => setActive("peer")}>
-          {active === "peer" ? (
+        <div onClick={() => setActive("/peer")}>
+          {active === "/peer" ? (
             <DatabaseFillAdd color={iconColor} size={iconSize} />
           ) : (
             <DatabaseAdd color={iconColor} size={iconSize} />
@@ -50,8 +50,8 @@ function Tabs() {
         </div>
       </NavLink>
       <NavLink to="/setting">
-        <div onClick={() => setActive("setting")}>
-          {active === "setting" ? (
+        <div onClick={() => setActive("/setting")}>
+          {active === "/setting" ? (
             <GearFill color={iconColor} size={iconSize} />
           ) : (
             <Gear color={iconColor} size={iconSize} />
