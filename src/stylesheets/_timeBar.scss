@@ -1,44 +1,31 @@
-.time-bar-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 201px;
-  height: 40px;
-  margin-bottom: 10px;
-}
-.time-bar-left {
-  width: 100px;
-  height: 30px;
-  background-color: #ffffff;
-  border-radius: 20px 0 0 20px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-.time-bar-right {
-  width: 100px;
-  height: 30px;
-  background-color: #ffffff;
-  border-radius: 0 20px 20px 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+@use "_helper";
+
+.time-bar {
+  @include helper.centerVertical;
+
+  background-color: white;
+
+  border: 1px solid #ccc;
+  border-radius: 20px;
+
+  padding: 1px 10px;
+
+  font-size: 15px;
+
+  .separator {
+    margin: 0 10px;
+
+    height: 80%;
+    border-left: 1px solid #ccc;
+  }
+  
 }
 
-.time-text {
-  font-size: 14px;
-  color: #4b4f5d;
-  font-family: "Kanit", sans-serif;
-  margin-left: 10px;
-}
+.time-bar .time {
+  @include helper.centerVertical;
+  flex-wrap: nowrap;
 
-.time-text-date {
-  font-size: 14px;
-  color: #4b4f5d;
-  font-family: "Kanit", sans-serif;
-}
-
-.time-content {
-  display: flex;
-  align-items: center;
+  .time-text {
+    margin-left: 5px;
+  }
 }
