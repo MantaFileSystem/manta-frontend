@@ -11,15 +11,19 @@ import {
   PersonFillGear,
   CloudArrowUpFill,
   DatabaseFillAdd,
-  GearFill
+  GearFill,
 } from "react-bootstrap-icons";
 
 const iconColor: string = "white",
   iconSize: number = 38;
 
-function Tabs() {
-  const [active, setActive] = useState(window.location.pathname);
-
+function Tabs({
+  active,
+  setActive,
+}: {
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+}) {
   return (
     <div className="tabs">
       <NavLink to="/">
@@ -73,10 +77,13 @@ function Support() {
 }
 
 export default function Menu() {
+  const [active, setActive] = useState(window.location.pathname);
   return (
     <div className="menu">
-      <Logo fill="white" />
-      <Tabs />
+      <NavLink to="/" onClick={() => setActive("/")}>
+        <Logo fill="white" />
+      </NavLink>
+      <Tabs active={active} setActive={setActive} />
       <Support />
     </div>
   );
