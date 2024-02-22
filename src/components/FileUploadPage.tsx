@@ -20,9 +20,11 @@ function FileList() {
           <th>
             <input type="checkbox" />
           </th>
-          <th>Name</th>
           <th>Pin Status</th>
+          <th>Name</th>
+          <th>Status</th>
           <th>Size</th>
+          <th>Peers</th>
         </tr>
       </thead>
       <tbody className="table-group-divider">
@@ -30,9 +32,18 @@ function FileList() {
           <td>
             <input type="checkbox" />
           </td>
+          <td>✅</td>
           <td>Movie.mp4</td>
-          <td>Pin Status</td>
-          <td>Size</td>
+          <td>
+            ⬆ 5 MB/s
+            <br />⬇ 18 MB/s
+          </td>
+          <td>
+            ■■■■■□□ 87%
+            <br />
+            823 MB
+          </td>
+          <td>18</td>
         </tr>
       </tbody>
     </table>

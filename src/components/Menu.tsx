@@ -11,53 +11,61 @@ import {
   PersonFillGear,
   CloudArrowUpFill,
   DatabaseFillAdd,
-  GearFill
+  GearFill,
 } from "react-bootstrap-icons";
 
-const iconColor: string = "white",
-  iconSize: number = 38;
+const iconColor = "white";
+const iconSize = 38;
 
-function Tabs() {
-  const [active, setActive] = useState(window.location.pathname);
+interface TabProps {
+  path: string;
+  active: boolean;
+  onClick: () => void;
+  Icon: React.ElementType;
+}
+
+function Tab({ path, active, onClick, Icon }: TabProps) {
+  return (
+    <NavLink to={path}>
+      <div onClick={onClick}>
+        {active ? (
+          <Icon color={iconColor} size={iconSize} />
+        ) : (
+          <Icon color={iconColor} size={iconSize} />
+        )}
+      </div>
+    </NavLink>
+  );
+}
+
+function Tabs({
+  active,
+  setActive,
+}: {
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+}) {
+  const tabs = [
+    { path: "/", Icon: active === "/" ? PersonFillGear : PersonGear },
+    {
+      path: "/file-upload",
+      Icon: active === "/file-upload" ? CloudArrowUpFill : CloudArrowUp,
+    },
+    { path: "/peer", Icon: active === "/peer" ? DatabaseFillAdd : DatabaseAdd },
+    { path: "/setting", Icon: active === "/setting" ? GearFill : Gear },
+  ];
 
   return (
     <div className="tabs">
-      <NavLink to="/">
-        <div onClick={() => setActive("/")}>
-          {active === "/" ? (
-            <PersonFillGear color={iconColor} size={iconSize} />
-          ) : (
-            <PersonGear color={iconColor} size={iconSize} />
-          )}
-        </div>
-      </NavLink>
-      <NavLink to="/file-upload">
-        <div onClick={() => setActive("/file-upload")}>
-          {active === "/file-upload" ? (
-            <CloudArrowUpFill color={iconColor} size={iconSize} />
-          ) : (
-            <CloudArrowUp color={iconColor} size={iconSize} />
-          )}
-        </div>
-      </NavLink>
-      <NavLink to="/peer">
-        <div onClick={() => setActive("/peer")}>
-          {active === "/peer" ? (
-            <DatabaseFillAdd color={iconColor} size={iconSize} />
-          ) : (
-            <DatabaseAdd color={iconColor} size={iconSize} />
-          )}
-        </div>
-      </NavLink>
-      <NavLink to="/setting">
-        <div onClick={() => setActive("/setting")}>
-          {active === "/setting" ? (
-            <GearFill color={iconColor} size={iconSize} />
-          ) : (
-            <Gear color={iconColor} size={iconSize} />
-          )}
-        </div>
-      </NavLink>
+      {tabs.map((tab) => (
+        <Tab
+          key={tab.path}
+          path={tab.path}
+          active={active === tab.path}
+          onClick={() => setActive(tab.path)}
+          Icon={tab.Icon}
+        />
+      ))}
     </div>
   );
 }
@@ -73,10 +81,14 @@ function Support() {
 }
 
 export default function Menu() {
+  const [active, setActive] = useState(window.location.pathname);
+
   return (
     <div className="menu">
-      <Logo fill="white" />
-      <Tabs />
+      <NavLink to="/" onClick={() => setActive("/")}>
+        <Logo fill="white" />
+      </NavLink>
+      <Tabs active={active} setActive={setActive} />
       <Support />
     </div>
   );
