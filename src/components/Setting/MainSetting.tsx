@@ -15,7 +15,7 @@ function AccessKeyGenerator() {
           <input
             type="text"
             className="access-key"
-            value="CAESIKY9RkdcwVuPzyQPn2SX7CEJRIj87Y1Mxtm0S5ABQMvI"
+            defaultValue="CAESIKY9RkdcwVuPzyQPn2SX7CEJRIj87Y1Mxtm0S5ABQMvI"
             placeholder="Enter Access Key"
           />
           <button>Generate</button>

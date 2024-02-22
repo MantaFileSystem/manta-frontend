@@ -42,6 +42,40 @@ function MapContent() {
           Node at [21, 20] <br /> Easily customizable.
         </Popup>
       </Circle>
+      <Circle
+        center={[10, 30]}
+        radius={250}
+        weight={10}
+        opacity={0.5}
+        fillOpacity={0.75}
+      >
+        <Popup>
+          Node at [10, 30] <br /> Easily customizable.
+        </Popup>
+      </Circle>
+      <Circle
+        center={[10, 50]}
+        radius={250}
+        weight={10}
+        opacity={0.5}
+        fillOpacity={0.75}
+      >
+        <Popup>
+          Node at [10, 50] <br /> Easily customizable.
+        </Popup>
+      </Circle>
+      <Circle
+        center={[39, 116]}
+        radius={250}
+        weight={10}
+        opacity={0.5}
+        fillColor="red"
+        fillOpacity={0.75}
+      >
+        <Popup>
+          Node at [39, 116] <br /> Beijing
+        </Popup>
+      </Circle>
     </MapContainer>
   );
 }
