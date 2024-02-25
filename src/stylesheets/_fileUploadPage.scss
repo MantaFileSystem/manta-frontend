@@ -1,0 +1,20 @@
+@use "_helper";
+
+$backgroundColor: #eaf1f2;
+$subTextColor: #4b4f5d;
+$importantTextColor: #12486b;
+
+.file-upload-page{
+    // overflow: hidden;
+    color: $subTextColor;
+    background-color: $backgroundColor;
+    padding: 40px;
+
+    .file-list {
+        overflow: hidden;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+}

@@ -1,13 +1,14 @@
 import "./stylesheets/App.scss";
+import "bootstrap/dist/css/bootstrap.css";
 
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Menu from "./components/Menu";
-import DashBoardPage from "./components/DashBoardPage";
+import DashboardPage from "./components/Dashboard/DashboardPage";
 import FileUploadPage from "./components/FileUploadPage";
 import PeerPage from "./components/PeerPage";
-import SettingPage from "./components/SettingPage";
+import SettingPage from "./components/Setting/SettingPage";
 
 function LocationProvider({ children }: { children: React.ReactNode }) {
   console.log(children);
@@ -19,7 +20,7 @@ function AnimatedRoutes() {
 
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<DashBoardPage />} />
+      <Route path="/" element={<DashboardPage />} />
       <Route path="/file-upload" element={<FileUploadPage />} />
       <Route path="/peer" element={<PeerPage />} />
       <Route path="/setting" element={<SettingPage />} />

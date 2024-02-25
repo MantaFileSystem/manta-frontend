@@ -5,6 +5,17 @@ Partial scss files must start with a underscore.
 */
 
 @import "menu";
+@import "dashBoardPage";
+@import "setting";
+@import "searchBar";
+@import "timeBar";
+@import "header";
+@import "peerPage";
+@import "fileUploadPage";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @mixin fullscreen {
   width: 100%;
@@ -26,7 +37,13 @@ Partial scss files must start with a underscore.
     grid-area: menu;
   }
 
+  h3 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
   display: grid;
   grid-template-areas: "menu content";
   grid-template-columns: 128px 1fr;
+  font-family:Arial, Helvetica, sans-serif
 }
