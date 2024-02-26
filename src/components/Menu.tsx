@@ -7,7 +7,6 @@ import {
   CloudArrowUp,
   DatabaseAdd,
   Gear,
-  InfoCircle,
   PersonFillGear,
   CloudArrowUpFill,
   DatabaseFillAdd,
@@ -22,17 +21,21 @@ interface TabProps {
   active: boolean;
   onClick: () => void;
   Icon: React.ElementType;
+  text: string;
 }
 
-function Tab({ path, active, onClick, Icon }: TabProps) {
+function Tab({ path, active, onClick, Icon, text }: TabProps) {
   return (
     <NavLink to={path}>
-      <div onClick={onClick}>
-        {active ? (
-          <Icon color={iconColor} size={iconSize} />
-        ) : (
-          <Icon color={iconColor} size={iconSize} />
-        )}
+      <div className="tab" onClick={onClick}>
+        <div>
+          {active ? (
+            <Icon color={iconColor} size={iconSize} />
+          ) : (
+            <Icon color={iconColor} size={iconSize} />
+          )}
+        </div>
+        <div>{text}</div>
       </div>
     </NavLink>
   );
@@ -46,13 +49,26 @@ function Tabs({
   setActive: React.Dispatch<React.SetStateAction<string>>;
 }) {
   const tabs = [
-    { path: "/", Icon: active === "/" ? PersonFillGear : PersonGear },
     {
-      path: "/file-upload",
-      Icon: active === "/file-upload" ? CloudArrowUpFill : CloudArrowUp,
+      path: "/",
+      Icon: active === "/" ? CloudArrowUpFill : CloudArrowUp,
+      text: "File Upload",
     },
-    { path: "/peer", Icon: active === "/peer" ? DatabaseFillAdd : DatabaseAdd },
-    { path: "/setting", Icon: active === "/setting" ? GearFill : Gear },
+    {
+      path: "/peer",
+      Icon: active === "/peer" ? DatabaseFillAdd : DatabaseAdd,
+      text: "Peer",
+    },
+    {
+      path: "/dashboard",
+      Icon: active === "/dashboard" ? PersonFillGear : PersonGear,
+      text: "Dashboard",
+    },
+    {
+      path: "/setting",
+      Icon: active === "/setting" ? GearFill : Gear,
+      text: "Setting",
+    },
   ];
 
   return (
@@ -64,18 +80,9 @@ function Tabs({
           active={active === tab.path}
           onClick={() => setActive(tab.path)}
           Icon={tab.Icon}
+          text={tab.text}
         />
       ))}
-    </div>
-  );
-}
-
-function Support() {
-  return (
-    <div className="support">
-      <div>
-        <InfoCircle color={iconColor} size={iconSize - 5} />
-      </div>
     </div>
   );
 }
@@ -89,7 +96,6 @@ export default function Menu() {
         <Logo fill="white" />
       </NavLink>
       <Tabs active={active} setActive={setActive} />
-      <Support />
     </div>
   );
 }
