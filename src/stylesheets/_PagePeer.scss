@@ -1,13 +1,10 @@
 @use "_helper";
 
-$backgroundColor: #eaf1f2;
-$subTextColor: #4b4f5d;
-$importantTextColor: #12486b;
 
 .peer-page{
     overflow: hidden;
-    color: $subTextColor;
-    background-color: $backgroundColor;
+    color: helper.$subTextColor;
+    background-color: helper.$backgroundColor;
     padding: 40px;
 
     width: 100%;
