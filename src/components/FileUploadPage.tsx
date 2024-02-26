@@ -9,7 +9,7 @@ function UploadStatus() {
       <Header />
       <div className="file-upload-title-btn">
         <h3>File Upload Status</h3>
-        <button className="import-btn">+ Import</button>
+        <button className="import-btn">+Import</button>
       </div>
     </div>
   );
