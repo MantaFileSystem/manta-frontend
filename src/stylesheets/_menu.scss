@@ -1,7 +1,9 @@
 @use "helper";
 
 .menu {
-  @include helper.spaceBetween(column);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   height: 100%;
   background-color: #12486b;
   opacity: 85%;
@@ -12,24 +14,15 @@
   }
 }
 
-.menu :is(.tabs, .support) {
-  div {
-    @include helper.centerHorizontal;
-    margin-top: 10px;
-  }
-
-  svg {
-    @include helper.dropDownShadow;
-  }
-}
-
 .menu .tabs {
-  @include helper.spaceBetween(column);
-  height: 35%;
-  margin-bottom: 100px;
-}
+  .tab {
+    @include helper.centerVertical;
+    margin: 0 1.5em 40px;
+    column-gap: 10px;
+    color: white;
+  }
 
-.menu .support {
-  @include helper.centerHorizontal;
-  margin: 10px 0 70px;
+  a {
+    text-decoration: none;
+  }
 }

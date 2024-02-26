@@ -20,9 +20,9 @@ function AnimatedRoutes() {
 
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<DashboardPage />} />
-      <Route path="/file-upload" element={<FileUploadPage />} />
+      <Route path="/" element={<FileUploadPage />} />
       <Route path="/peer" element={<PeerPage />} />
+      <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/setting" element={<SettingPage />} />
     </Routes>
   );
