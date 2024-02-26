@@ -1,36 +1,16 @@
 @use "_helper";
 
-$backgroundColor: #eaf1f2;
-$subTextColor: #4b4f5d;
-$importantTextColor: #12486b;
-
-.file-upload-page {
-  overflow: hidden;
-  color: $subTextColor;
-  background-color: $backgroundColor;
-  padding: 40px;
-
-  .file-list {
+.file-upload-page{
     overflow: hidden;
-  }
+    color: helper.$subTextColor;
+    background-color: helper.$backgroundColor;
+    padding: 40px;
 
-  .file-upload-header .file-upload-title-btn {
-    
-    @include helper.spaceBetween(row);
-    @include helper.centerVertical;
+    .file-list {
+        overflow: hidden;
+    }
 
-    margin-bottom: 30px;
-    
     h3 {
-      margin: 0;
+        margin-bottom: 20px;
     }
-
-    .import-btn {
-        background-color: helper.$importantTextColor;
-        padding: 5px 10px;
-        border-radius: 8px;
-        color: white;
-        opacity: 85%;
-    }
-  }
 }

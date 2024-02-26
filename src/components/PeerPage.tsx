@@ -69,6 +69,7 @@ function MapContent() {
         radius={250}
         weight={10}
         opacity={0.5}
+        color="red"
         fillColor="red"
         fillOpacity={0.75}
       >
