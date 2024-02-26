@@ -3,16 +3,17 @@ Use @import "scss filename" to append other scss files to this one
 
 Partial scss files must start with a underscore.
 */
-
+// Pages import
 @import "menu";
-@import "dashBoardPage";
-@import "setting";
+@import "PageDashBoard";
+@import "PageFileUpload";
+@import "PagePeer";
+@import "PageSetting";
+// Components import
 @import "searchBar";
 @import "timeBar";
 @import "header";
-@import "peerPage";
-@import "fileUploadPage";
-
+// Tailwind import
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
