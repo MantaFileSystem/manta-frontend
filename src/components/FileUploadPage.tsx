@@ -5,9 +5,12 @@ import Header from "./Header/Header";
 
 function UploadStatus() {
   return (
-    <div className="upload-status">
+    <div className="file-upload-header">
       <Header />
-      <h3>File Upload Status</h3>
+      <div className="file-upload-title-btn">
+        <h3>File Upload Status</h3>
+        <button className="import-btn">+ Import</button>
+      </div>
     </div>
   );
 }
