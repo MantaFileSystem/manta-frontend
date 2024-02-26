@@ -6,11 +6,24 @@
     background-color: helper.$backgroundColor;
     padding: 40px;
 
-    .file-list {
-        overflow: hidden;
+  .file-upload-header .file-upload-title-btn {
+    
+    @include helper.spaceBetween(row);
+    @include helper.centerVertical;
+
+    margin-bottom: 30px;
+    
+    h3 {
+      margin: 0;
     }
 
-    h3 {
-        margin-bottom: 20px;
+    .import-btn {
+        background-color: helper.$importantTextColor;
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: white;
+        opacity: 85%;
     }
+  }
 }
+
