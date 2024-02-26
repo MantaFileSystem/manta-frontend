@@ -9,7 +9,9 @@ function UploadStatus() {
       <Header />
       <div className="file-upload-title-btn">
         <h3>File Upload Status</h3>
-        <button className="import-btn">+Import</button>
+        <button className="import-btn px-2 py-1 rounded-lg bg-sky-500 hover:bg-sky-700">
+          + Import
+        </button>
       </div>
     </div>
   );
