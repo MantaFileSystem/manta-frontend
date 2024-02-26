@@ -19,10 +19,18 @@
     @include helper.centerVertical;
     margin: 0 1.5em 40px;
     column-gap: 10px;
+  }
+
+  .tab-text {
+    font-weight: bold;
     color: white;
   }
 
   a {
     text-decoration: none;
+  }
+
+  a:hover .tab-text {
+    text-decoration: underline;
   }
 }

@@ -35,7 +35,7 @@ function Tab({ path, active, onClick, Icon, text }: TabProps) {
             <Icon color={iconColor} size={iconSize} />
           )}
         </div>
-        <div>{text}</div>
+        <div className="tab-text">{text}</div>
       </div>
     </NavLink>
   );
